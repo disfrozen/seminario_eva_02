@@ -1,0 +1,169 @@
+[{
+	"nombre": "Taller de Diseño Gráfico V",
+	"codigo": "DGP501",
+	"creditaje": 9,
+	"directas": 10,
+	"dedicacion": [{
+		"nombre": "Tomás L. Urbano",
+		"horas": [14, 17, 23]
+	}, {
+		"nombre": "Felipe Cabello",
+		"horas": [12, 14, 23]
+	}, {
+		"nombre": "Felipe Sánchez",
+		"horas": [13, 13, 10]
+	}, {
+		"nombre": "Valentina Espinoza",
+		"horas": [5, 15, 11]
+	}, {
+		"nombre": "Deianira Reyes",
+		"horas": [13, 10, 10]
+	}]
+}, {
+	"nombre": "Seminario Gráfica Computacional I",
+	"codigo": "DGP502",
+	"creditaje": 3,
+	"directas": 3,
+	"dedicacion": [{
+		"nombre": "Tomás L. Urbano",
+		"horas": [3, 4, 3]
+	}, {
+		"nombre": "Felipe Cabello",
+		"horas": [3, 4, 3]
+	}, {
+		"nombre": "Felipe Sánchez",
+		"horas": [3, 3, 3]
+	}, {
+		"nombre": "Valentina Espinoza",
+		"horas": [4, 3, 3]
+	}, {
+		"nombre": "Deianira Reyes",
+		"horas": [3, 4, 3]
+	}]
+}, {
+	"nombre": "Seminario Producción Audiovisual I",
+	"codigo": "DGP503",
+	"creditaje": 3,
+	"directas": 3,
+	"dedicacion": [{
+		"nombre": "Tomás L. Urbano",
+		"horas": [4, 3, 6]
+	}, {
+		"nombre": "Felipe Cabello",
+		"horas": [5, 5, 3]
+	}, {
+		"nombre": "Felipe Sánchez",
+		"horas": [3, 3, 3]
+	}, {
+		"nombre": "Valentina Espinoza",
+		"horas": [6, 5, 3]
+	}, {
+		"nombre": "Deianira Reyes",
+		"horas": [0, 0, 0]
+	}]
+}, {
+	"nombre": "Seminario de Diseño Gráfico I",
+	"codigo": "DGP504",
+	"creditaje": 5,
+	"directas": 5,
+	"dedicacion": [{
+		"nombre": "Tomás L. Urbano",
+		"horas": [14, 5, 5]
+	}, {
+		"nombre": "Felipe Cabello",
+		"horas": [8, 6, 5]
+	}, {
+		"nombre": "Felipe Sánchez",
+		"horas": [11, 6, 5]
+	}, {
+		"nombre": "Valentina Espinoza",
+		"horas": [5, 5, 5]
+	}, {
+		"nombre": "Deianira Reyes",
+		"horas": [6, 0, 0]
+	}]
+}, {
+	"nombre": "Publicidad",
+	"codigo": "DGP505",
+	"creditaje": 3,
+	"directas": 3,
+	"dedicacion": [{
+		"nombre": "Tomás L. Urbano",
+		"horas": [8, 3, 3]
+	}, {
+		"nombre": "Felipe Cabello",
+		"horas": [9, 3, 3]
+	}, {
+		"nombre": "Felipe Sánchez",
+		"horas": [7, 3, 3]
+	}, {
+		"nombre": "Valentina Espinoza",
+		"horas": [11, 3, 3]
+	}, {
+		"nombre": "Deianira Reyes",
+		"horas": [6, 4, 11]
+	}]
+}, {
+	"nombre": "Seminario de Gestión I",
+	"codigo": "DGP506",
+	"creditaje": 3,
+	"directas": 3,
+	"dedicacion": [{
+		"nombre": "Tomás L. Urbano",
+		"horas": [5, 4, 3]
+	}, {
+		"nombre": "Felipe Cabello",
+		"horas": [4, 4, 4]
+	}, {
+		"nombre": "Felipe Sánchez",
+		"horas": [3, 5, 3]
+	}, {
+		"nombre": "Valentina Espinoza",
+		"horas": [3, 3, 3]
+	}, {
+		"nombre": "Deianira Reyes",
+		"horas": [3, 6, 4]
+	}]
+}, {
+	"nombre": "Práctica Profesional I",
+	"codigo": "DGP507",
+	"creditaje": 2,
+	"directas": 0,
+	"dedicacion": [{
+		"nombre": "Tomás L. Urbano",
+		"horas": [2, 3, 1]
+	}, {
+		"nombre": "Felipe Cabello",
+		"horas": [5, 0, 16]
+	}, {
+		"nombre": "Felipe Sánchez",
+		"horas": [0, 2, 44]
+	}, {
+		"nombre": "Valentina Espinoza",
+		"horas": [2, 2, 2]
+	}, {
+		"nombre": "Deianira Reyes",
+		"horas": [0, 0, 0]
+	}]
+}, {
+	"nombre": "Electivo III",
+	"codigo": "DE3",
+	"creditaje": 4,
+	"directas": 3,
+	"dedicacion": [{
+		"nombre": "Tomás L. Urbano",
+		"horas": [3, 3, 3]
+	}, {
+		"nombre": "Felipe Cabello",
+		"horas": [4, 4, 4]
+	}, {
+		"nombre": "Felipe Sánchez",
+		"horas": [11, 13, 10]
+	}, {
+		"nombre": "Valentina Espinoza",
+		"horas": [3, 3, 3]
+	}, {
+		"nombre": "Deianira Reyes",
+		"horas": [3, 2, 0]
+	}]
+}]
