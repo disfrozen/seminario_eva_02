@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700&display=swap');
+
+body{
+  font-family:'Roboto Mono';
+  font-weight: 400;
+}
+
+h1{
+  font-weight: 400;
+}
+
+h2, h3, h4, h5, h6, strong{
+  font-family:'Roboto Mono';
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+a#info{
+  font-style: italic;
+  font-weight: 400;
+  color: red;
+  text-transform: lowercase;
+}
+
+a#info:hover{
+  color: green;
+}
+
+a#creator{
+  color: black;
+}
+
+a#next{
+  color: red;
+  font-style: italic;
+  font-weight: 400;
+}
+
+a#next:hover{
+  color: green;
+}
+
+.launcher{
+  color:white;
+  font-weight: bold;
+  font-family: 'Roboto Mono';
+}
+
+.launcher:hover{
+  color:white;
+  font-weight: bold;
+  font-family: 'Roboto Mono';
+}
+
+.photo{
+  max-height: 500px;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  max-height: 700px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

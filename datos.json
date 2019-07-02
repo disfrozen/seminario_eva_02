@@ -1,0 +1,85 @@
+https://api.myjson.com/bins/8g9yb
+https://api.myjson.com/bins/1e7nv7
+
+[
+  {
+    "nombre": "Taller de Diseño Gráfico V",
+  	"codigo": "DGP501",
+  	"creditaje": 9,
+  	"directas": 10,
+  	"dedicacion": [{
+  		"nombre": "Tomás L. Urbano",
+  		"horas": [14, 17, 29, 18]
+      }]
+},
+  {
+    "nombre": "Seminario Gráfica Computacional I",
+  	"codigo": "DGP502",
+  	"creditaje": 3,
+  	"directas": 3,
+  	"dedicacion": [{
+  		"nombre": "Tomás L. Urbano",
+  		"horas": [3, 4, 4, 4]
+      }]
+},
+  {
+    "nombre": "Seminario Producción Audiovisual I",
+  	"codigo": "DGP503",
+  	"creditaje": 3,
+  	"directas": 3,
+  	"dedicacion": [{
+  		"nombre": "Tomás L. Urbano",
+  		"horas": [4, 6, 3, 9]
+      }]
+},
+  {
+    "nombre": "Seminario de Diseño Gráfico I",
+  	"codigo": "DGP504",
+  	"creditaje": 5,
+  	"directas": 5,
+  	"dedicacion": [{
+  		"nombre": "Tomás L. Urbano",
+  		"horas": [14, 5, 7, 12]
+      }]
+},
+  {
+    "nombre": "Publicidad",
+  	"codigo": "DGP505",
+  	"creditaje": 3,
+  	"directas": 3,
+  	"dedicacion": [{
+  		"nombre": "Tomás L. Urbano",
+  		"horas": [8, 3, 2, 9]
+      }]
+},
+  {
+    "nombre": "Seminario de Gestión I",
+  	"codigo": "DGP506",
+  	"creditaje": 3,
+  	"directas": 3,
+  	"dedicacion": [{
+  		"nombre": "Tomás L. Urbano",
+  		"horas": [5, 4, 5, 4]
+      }]
+},
+  {
+    "nombre": "Práctica Profesional I",
+  	"codigo": "DGP507",
+  	"creditaje": 2,
+  	"directas": 0,
+  	"dedicacion": [{
+  		"nombre": "Tomás L. Urbano",
+  		"horas": [2, 3, 12, 5]
+      }]
+},
+  {
+    "nombre": "Arquería",
+  	"codigo": "DE3",
+  	"creditaje": 4,
+  	"directas": 3,
+  	"dedicacion": [{
+  		"nombre": "Tomás L. Urbano",
+  		"horas": [3, 3, 3, 3]
+      }]
+}
+]

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="nofollow,noindex">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vida y penurias de un estudiante de la FAU">
+    <meta property="og:description" content="Ésta página contiene una recopilación de datos sobre un estudiante de la FAU, realizada por el mismo estudiante. Contiene información sobre la carga académica, el estrés, y el manejo de los tiempos.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vida y penurias de un estudiante de la FAU">
+    <meta property="twitter:description" content="Ésta página contiene una recopilación de datos sobre un estudiante de la FAU, realizada por el mismo estudiante. Contiene información sobre la carga académica, el estrés, y el manejo de los tiempos.">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Ya, pero pa qué po. | Vida y penurias de un estudiante de la FAU</title>
+  </head>
+
+  <body class="bg-light py-3">
+    <div class="container py-5 pb-5">
+      <div class="row">
+        <div class="col-sm-10 py-4">
+          <h1>Distribuición de tiempo fuera de la U en una semana promedio</h1>
+        </div>
+        <div class="col-sm-2 text-right py-5">
+          <a href="info.html" id="info">+ Info</a>
+        </div>
+        <div class="col-sm-12 bg-light py-1 p-0" id="vis">
+        <!--acá va el dibujo de p5.js-->
+        </div>
+        <div class="col-sm-12 py-2">
+          <h3 class="border-bottom py-2">Datos</h3>
+          <p>Tomaré como ejemplo la semana del 22 de mayo, cuando primero comenzamos a realizar ésta recopilación de datos. Suponiendo que paso 8hrs en promedio en la U, eso nos deja con 16 horas, teóricamente, en la casa. O mejor dicho, fuera de la Universidad.</p>
+          <p>En orden de más oscuro a más claro, las categorías son: Tiempo de trabajo - Tiempo de juego - Tiempo de sueño - Tiempo de comida - Tiempo de transporte - Misceláneos.</p>
+          <a href="quinta.html" id="next">Next -></a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+      <div class="container pb-2 border-bottom">
+      <a class="navbar-brand" href="index.html">Visualizaciones</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Portada <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="segunda.html">Tiempos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tercera.html">Sueño</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="cuarta.html">Semanal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quinta.html">Ánimo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">About</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--sale rellenar con p5.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+
+    <script>
+      var w, h;
+      let angles = [82, 61, 96, 27, 20, 84];
+
+      function setup(){
+        var w = document.getElementById('vis').offsetWidth;
+        var h = w/2;
+
+        createCanvas(w,h).parent('vis');
+        background(250);
+        noStroke();
+        noLoop(); // Run once and stop
+      }
+
+      function draw() {
+        background(250);
+        pieChart(300, angles);
+      }
+
+      function pieChart(diameter, data) {
+        let lastAngle = 0;
+        for (let i = 0; i < data.length; i++) {
+          let gray = map(i, 0, data.length, 0, 255);
+          fill(gray);
+          arc(
+            width / 2,
+            height / 2,
+            diameter,
+            diameter,
+            lastAngle,
+            lastAngle + radians(angles[i])
+          );
+          lastAngle += radians(angles[i]);
+        }
+      }
+    </script>
+
+  </body>
+</html>

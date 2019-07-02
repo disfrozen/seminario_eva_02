@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="nofollow,noindex">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vida y penurias de un estudiante de la FAU">
+    <meta property="og:description" content="Ésta página contiene una recopilación de datos sobre un estudiante de la FAU, realizada por el mismo estudiante. Contiene información sobre la carga académica, el estrés, y el manejo de los tiempos.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vida y penurias de un estudiante de la FAU">
+    <meta property="twitter:description" content="Ésta página contiene una recopilación de datos sobre un estudiante de la FAU, realizada por el mismo estudiante. Contiene información sobre la carga académica, el estrés, y el manejo de los tiempos.">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Ya, pero pa qué po. | Vida y penurias de un estudiante de la FAU</title>
+  </head>
+
+  <body class="bg-light py-3">
+    <div class="container py-5 pb-5">
+      <div class="row">
+        <div class="col-sm-10 py-4">
+          <h1>Tiempo gastado en la U</h1>
+        </div>
+        <div class="col-sm-2 text-right py-5 pt-5 pb-2 d-none d-sm-block">
+          <a href="info.html" id="info">+ Info</a>
+        </div>
+        <div class="col-sm-12 bg-light py-1 p-0" id="vis">
+        <!--acá va el dibujo de p5.js-->
+        </div>
+        <div class="col-sm-7 py-2">
+          <h3 class="border-bottom py-2">Info</h3>
+          <p>En éste gráfico, se debería representar la carga horaria que establece la Facultad de Arquitectura y Urbanismo, y cómo la he afrontado a lo largo del último mes.</p>
+          <p>Tristemente, no logré que funcionara del todo. F.</p>
+          <a href="tercera.html" id="next">Next -></a>
+        </div>
+        <div class="col-sm-5 py-2">
+          <a href="#" data-toggle="modal" data-target=".tabla-semestral"><h3 class="border-bottom py-2">Créditos</h3></a>
+          <!-- slider? -->
+          <div class="py-3" id="extra"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade tabla-semestral" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr><th>Código</th><th>Asignatura</th><th class="text-center">Créditos SCT</th></tr>
+                        </thead>
+                        <tbody id="tableado">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+      <div class="container pb-2 border-bottom">
+      <a class="navbar-brand" href="index.html">Visualizaciones</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Portada <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="segunda.html">Tiempos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tercera.html">Sueño</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cuarta.html">Semanal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quinta.html">Ánimo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">About</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--sale rellenar con p5.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+
+    <script>
+      var estudiantes = 1;
+      var horas = 45; // opción por defecto para el trabajo por semana
+      var asignaturas = 8; // cantidad de asignaturas del semestre
+      var creditos = 0; // variable para hacer un cálculo
+      var sct, sel, donde; // variables que pronto se usarán
+      var url = "https://api.myjson.com/bins/1e7nv7"
+
+      var total = 0; // necesito esta variable para un cálculo, que se hace dentro de un par de ciclos for
+      var promedio = 0; // ídem
+
+      function preload(){
+            sct = loadJSON(url);
+      }
+
+      function setup() {
+          sel = createSelect().parent('extra').id('asignatura');
+          sel.option('selecciona una asignatura');
+          for (var i = 0; i < asignaturas; i++) {
+              sel.option(sct[i]["nombre"]);
+              createElement('tr','<td> ' + sct[i]["codigo"] + '</td><td>'+sct[i]["nombre"]+'</td><td class="text-center">'+ sct[i]["creditaje"] +'</td>').parent("tableado");
+              creditos = creditos + sct[i]["creditaje"];
+          }
+          sel.changed(evento);
+          donde = createDiv('').parent('vis').id('inside');
+          document.getElementById("total-creditos").innerHTML = creditos;
+          document.getElementById("total-asignaturas").innerHTML = asignaturas;
+      }
+
+      function operacion() {
+            horas = Number(document.getElementById("horas").value);
+            document.getElementById("asignatura").value = "selecciona una asignatura";
+            donde.remove();
+      }
+
+      function evento() {
+          donde.remove();
+          donde = createDiv('').parent('vis').id('inside').addClass("py-3 text-muted");
+          var w = document.getElementById('inside').offsetWidth;
+          var h = (estudiantes * 31);
+          var pos;
+
+          if (sel.value().includes("Taller")) {
+              pos = 0;
+          } else if (sel.value().includes("Computacional")) {
+              pos = 1;
+          } else if (sel.value().includes("Audiovisual")) {
+              pos = 2;
+          } else if (sel.value().includes("Diseño")) {
+              pos = 3;
+          } else if (sel.value().includes("Publicidad")) {
+              pos = 4;
+          } else if (sel.value().includes("Gestión")) {
+              pos = 5;
+          } else if (sel.value().includes("Práctica")) {
+              pos = 6;
+          } else if (sel.value().includes("Electivo")) {
+              pos = 7;
+          } else {
+              donde.remove();
+          }
+
+          createElement('h5', 'La asignatura de "' + sct[pos].nombre + '" aporta ' + sct[pos].creditaje + ' de los ' + creditos + ' créditos SCT del séptimo semestre.').parent("inside");
+
+          var proporcional = (sct[pos].creditaje * horas) / creditos;
+
+          var proporcional_fix = proporcional.toFixed(1);
+
+          createElement('p', 'A condición de dedicar ' + horas + ' horas a todo el trabajo académico, las actividades relacionadas con esta asignatura exigen, idealmente, <strong>' + proporcional_fix + ' horas cada semana</strong>. En un registro real, que considera un promedio de ' + sct[pos].dedicacion[0].horas.length + ' semanas de trabajo, ' + estudiantes + ' estudiantes tuvieron que dedicarse a "' + sct[pos].nombre  + '" por:').parent("inside");
+
+          createCanvas(w, h).parent("inside");
+          noStroke();
+          textSize(15);
+
+          for (var x = 0; x < estudiantes; x++) {
+              for (var y = 0; y < sct[pos].dedicacion[x].horas.length; y++) {
+                  total = total + sct[pos].dedicacion[x].horas[y];
+              }
+
+              promedio = total / estudiantes;
+
+              if (x != 0) {
+                  translate(0, 31)
+              }
+
+              if (proporcional_fix < promedio) {
+                  fill(200,0,0)
+                  rect(0, 0, proporcional_fix * (width / horas), 30);
+                  console.log(proporcional_fix)
+                  fill(255, 0, 0);
+                  rect(proporcional_fix * (width / horas), 0, (promedio * (width / horas))-(proporcional_fix * (width / horas)), 30);
+                  text(promedio + " hrs. (" + sct[pos].dedicacion[x].nombre + ")", promedio * (width / horas) + 10, 20);
+
+              } else {
+                  fill(190, 215, 235);
+                  rect(0, 0, promedio * (width / horas), 30);
+                  fill(135,145,155);
+                  text(promedio + " hrs. (" + sct[pos].dedicacion[x].nombre + ")", promedio * (width / horas) + 10, 20);
+
+              }
+
+              promedio = 0;
+              total = 0;
+
+          }
+
+          createElement('p', '&uarr; Este gráfico se construye mediante consulta al JSON que se encuentra publicado en <a href="'+ url +'">' + url + '</a>').addClass("mt-3 border-top py-2 small").parent("inside");
+
+        }
+    </script>
+
+  </body>
+</html>
